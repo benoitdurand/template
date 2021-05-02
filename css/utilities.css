@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald&display=swap');
+
+:root {
+    --primary-color: #fed136;
+    --primary-grey-light: #f7f7f7;
+    --secondary-grey-light: #f9f9f9;
+    --primary-grey-dark: #222;
+    --secondary-grey-dark: #767676;
+
+    --container-max-width : 96rem;
+    --container-width: 75%;
+}
+
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+h1, h2 {
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: var(--container-width);
+    margin: 0 auto;
+    max-width: var(--container-max-width);
+}
+
+.container-flex{
+    width: var(--container-width);
+    margin: 0 auto;
+    max-width: var(--container-max-width);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.section-title-dark {
+    padding-top: 12rem;
+    font-size: 4rem;
+    color: var(--primary-grey-dark);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+.section-title-light {
+    padding-top: 12rem;
+    font-size: 4rem;
+    color: var(--primary-grey-light);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+.section-subtitle {
+    font-size: 1.8rem;
+    color: var(--secondary-grey-dark);
+    text-align: center;
+    font-style: italic;
+    padding-bottom: 3rem;
+}
+
+.bg-grey {
+    background-color: var(--primary-grey-light);
+}
+
+.bg-dark {
+    background-color: var(--primary-grey-dark);
+}
+
+.btn {
+    font-size: 2rem;
+    padding: 2rem 3rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+
+@media screen and (max-width: 640px) {
+    .section-title-dark {
+        padding-top: 8rem;
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: .8rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
