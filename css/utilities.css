@@ -7,8 +7,10 @@
     --primary-grey-dark: #222;
     --secondary-grey-dark: #767676;
 
-    --container-max-width : 96rem;
+    --container-max-width: 96rem;
     --container-width: 75%;
+
+    --title-primary-color: #394b50;
 }
 
 
@@ -20,6 +22,7 @@
 
 html {
     font-size: 62.5%;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -28,6 +31,7 @@ body {
     background: #fff;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 ul {
@@ -58,40 +62,48 @@ img {
     max-width: var(--container-max-width);
 }
 
-.container-flex{
-    width: var(--container-width);
-    margin: 0 auto;
+.container-flex {
     max-width: var(--container-max-width);
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--container-width);
+    flex: 1 1 0;
 }
 
-
-.section-title-dark {
-    padding-top: 12rem;
+.section-title {
+    padding-top: 8rem;
     font-size: 4rem;
-    color: var(--primary-grey-dark);
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
+    letter-spacing: 1rem;
 }
 
 .section-title-light {
-    padding-top: 12rem;
-    font-size: 4rem;
-    color: var(--primary-grey-light);
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
+    color: white;
+}
+
+.section-title-dark {
+    color: var(--title-primary-color);
 }
 
 .section-subtitle {
     font-size: 1.8rem;
     color: var(--secondary-grey-dark);
-    text-align: center;
     font-style: italic;
     padding-bottom: 3rem;
+    text-align: center;
+}
+
+.section-subtitle-light {
+    color: white;
+}
+
+.section-subtitle-dark {
+    color: var(--title-primary-color);
 }
 
 .bg-grey {
@@ -113,21 +125,39 @@ img {
     border: none;
 }
 
-@media screen and (max-width: 640px) {
-    .section-title-dark {
-        padding-top: 8rem;
-        font-size: 2rem;
+@media screen and (max-width: 800px) {
+    .section-title {
+        padding-top: 5rem;
+        font-size: 2.5rem;
+        letter-spacing: 0;
     }
 
     .section-subtitle {
-        font-size: .8rem;
+        font-size: 1.2rem;
         padding-bottom: 2rem;
     }
 }
 
-@media screen and (max-width: 350px) {
-    .container {
-        width: 95%;
-        margin: 0 auto;
+@media screen and (max-width: 640px) {
+    .section-title {
+        font-size: 3rem;
+        letter-spacing: 0;
     }
+
+    .section-subtitle {
+        font-size: 1.2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .section-title {
+        padding-top: 3rem;
+        font-size: 1.5rem;
+    }
+
+        .section-subtitle {
+        font-size: 1.1rem;
+    }
+
 }
